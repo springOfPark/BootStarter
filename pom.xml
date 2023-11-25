@@ -11,22 +11,30 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 스프링 부트가 관리하는 버전을 바꾸는 방법
+        <spring-framework.version>5.3.31</spring-framework.version>
+        -->
     </properties>
 
     <!-- Parent Tag for Spring Boot Setting -->
     <!-- 부트가 제공하는 의존성 관리와 관련이 깊은 설정 -->
+    <!-- 해당 설정 덕분에 아래쪽에 dependecies dependency 에 버전을 명시하지 않아도 된다. (버전 의존성 관리를 알아서 해주는 장점) -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.18</version>
     </parent>
 
-    <!-- Spring Boot Starter Web 추가 -->
     <dependencies>
+        <!-- Spring Boot Starter Web 추가 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- Spring Boot Starter Data JPA 추가 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
     </dependencies>
 
