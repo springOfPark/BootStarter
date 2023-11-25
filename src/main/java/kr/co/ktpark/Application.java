@@ -1,6 +1,7 @@
 package kr.co.ktpark;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // @SpringBootConfiguration // 그냥 @Configuration 과 동일 (자신을 빈으로 등록)
@@ -19,9 +20,24 @@ public class Application {
     public static void main(String[] args) {
 
         SpringApplication springApplication = new SpringApplication(Application.class);
+        springApplication.setWebApplicationType(WebApplicationType.NONE);
         // springApplication.setWebApplicationType(WebApplicationType.NONE); // AutoConfiguration 없이 WebApplication 으로 시작되지 않도록 설정
         springApplication.run(args);
         // SpringApplication.run(Application.class, args);
     }
+
+    // 다른 프로젝트의 해당 클래스에
+    // @ConditionalOnMissingBean 해당 빈이 등록되어있지 않은 경우에만 빈에 등록한다.
+    // 어노테이션이 붙어있기 때문에 여기서 등록한 Bean이 등록된다.
+    /*
+    @Bean
+    public Holoman holoman() {
+        Holoman holoman = new Holoman();
+        holoman.setName("박연귀");
+        holoman.setHowLong(1);
+        holoman.setNowFeel("자는중입니다.");
+        return holoman;
+    }
+     */
 
 }
