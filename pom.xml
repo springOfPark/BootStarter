@@ -72,6 +72,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
+
+        <!-- JSON TO XML MAPPER (MappingJackson2XmlHttpMessageConverter 사용하기 위함 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.13.5</version>
+        </dependency>
+
     </dependencies>
 
     <!-- Build Plugin 추가 -->
