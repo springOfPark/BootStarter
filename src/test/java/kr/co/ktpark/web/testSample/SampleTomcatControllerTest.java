@@ -13,7 +13,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SampleTomcatControllerTest {
 
-    // Using for webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT OR DEFINED_PORT
+    // Using for webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT OR DEFINED_PORT (내장 톰캣 사용)
     @Autowired
     private TestRestTemplate testRestTemplate;
 

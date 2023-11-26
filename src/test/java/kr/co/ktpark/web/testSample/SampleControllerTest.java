@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-// @SpringBootTest webEnvironment = SpringBootTest.WebEnvironment.MOCK : 기본값
+// @SpringBootTest webEnvironment = SpringBootTest.WebEnvironment.MOCK : 기본값 (내장 톰캣 구동 안함)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc // Mock 사용
 class SampleControllerTest {
