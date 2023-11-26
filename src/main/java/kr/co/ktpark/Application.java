@@ -1,7 +1,6 @@
 package kr.co.ktpark;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // @SpringBootConfiguration // 그냥 @Configuration 과 동일 (자신을 빈으로 등록)
@@ -17,13 +16,10 @@ public class Application {
         --> @EnableAutoConfiguration
         --> SpringApplication.run(Application.class, args);
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        SpringApplication springApplication = new SpringApplication(Application.class);
-        springApplication.setWebApplicationType(WebApplicationType.NONE);
-        // springApplication.setWebApplicationType(WebApplicationType.NONE); // AutoConfiguration 없이 WebApplication 으로 시작되지 않도록 설정
-        springApplication.run(args);
-        // SpringApplication.run(Application.class, args);
+        SpringApplication.run(Application.class, args);
+
     }
 
     // 다른 프로젝트의 해당 클래스에
