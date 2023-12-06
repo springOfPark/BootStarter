@@ -18,8 +18,8 @@ public class SpringAppRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
-        logger.info("App Properties Value Object : {}", appProperties);
+        logger.info("App Properties Value Object : {}", appProperties)
+        ;
 
     }
 }
