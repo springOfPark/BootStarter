@@ -14,4 +14,5 @@ public class SampleController {
     public String hello() {
         return "Hello, " + sampleService.getName();
     }
+
 }
