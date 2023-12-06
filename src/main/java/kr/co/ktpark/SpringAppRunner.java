@@ -1,5 +1,6 @@
 package kr.co.ktpark;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.co.ktpark.config.AppProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,10 +17,11 @@ public class SpringAppRunner implements ApplicationRunner {
     @Autowired
     AppProperties appProperties;
 
+    @Autowired
+    ObjectMapper objectMapper;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        logger.info("App Properties Value Object : {}", appProperties)
-        ;
-
+        logger.info("App Properties Value Object : {}", appProperties);
     }
 }
